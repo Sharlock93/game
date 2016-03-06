@@ -116,6 +116,7 @@ int main(int argc, char *argv[]) {
 
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
+    //Note(sharo): new line
 
     glPointSize(4);
     
