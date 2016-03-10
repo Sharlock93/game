@@ -96,17 +96,13 @@ struct vec2 {
 };
 
 int main(int argc, char *argv[]) {
-
-
-    int abcd[4] = {12353, 2, 3, 4};
-    void *b =  &abcd[0];
-    int *c = &abcd[0];
-    
-    char *lala = (char *) b;
-
-    lala[100000000] = 'd'; 
-    std::cout << lala[1] << std::endl;
-    std::cout << *c << std::endl;
+ 
+    char test[] = "hello";
+    test[5] = 'a';
+    test[6] = (char)NULL;
+    test[7] = (char)NULL;
+    std::cout << test << std::endl;
+    std::cout << sizeof(test) << std::endl;
 
     
     
