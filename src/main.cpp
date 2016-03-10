@@ -2,6 +2,7 @@
 #include <iostream>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+#include <bitset>
 
 const char* vsource = "\
 #version 330 core\n\
@@ -96,6 +97,22 @@ struct vec2 {
 
 int main(int argc, char *argv[]) {
 
+
+    int abcd[4] = {12353, 2, 3, 4};
+    void *b =  &abcd[0];
+    int *c = &abcd[0];
+    
+    char *lala = (char *) b;
+
+    lala[100000000] = 'd'; 
+    std::cout << lala[1] << std::endl;
+    std::cout << *c << std::endl;
+
+    
+    
+    // std::cout << (&a) << std::endl;
+
+#if 0 
     GLFWwindow *window = init();
 
     bool run = true;
@@ -134,6 +151,7 @@ int main(int argc, char *argv[]) {
 
         glfwPollEvents();
     }
+#endif
 
     return 0;
 }
